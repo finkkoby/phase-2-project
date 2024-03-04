@@ -1,0 +1,28 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "title": "Waiting Room",
+      "artist": "Phoebe Bridgers",
+      "album": "Lost Ark Studio Compilation, Vol. 8",
+      "length": "6:34",
+      "image": "https://i1.sndcdn.com/artworks-F5H85xHY4qId6Lt2-Y3Ylig-t500x500.jpg"
+    },
+    {
+      "id": 2,
+      "title": "TEXAS HOLD 'EM",
+      "artist": "Beyoncé",
+      "album": "TEXAS HOLD 'EM",
+      "length": "3:56",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/e0/Beyonc%C3%A9_-_Texas_Hold_%27Em.png"
+    },
+    {
+      "id": 3,
+      "title": "I GOT YOU",
+      "artist": "TWICE",
+      "album": "With YOU-th",
+      "length": "2:53",
+      "image": "https://images.genius.com/324acb2792e1aec593b539054faab2ea.1000x1000x1.png"
+    }
+  ]
+}
