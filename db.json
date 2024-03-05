@@ -31,21 +31,21 @@
       "title": "Red, White, and Royal Blue",
       "author": "Casey McQuiston",
       "image": "https://upload.wikimedia.org/wikipedia/en/8/80/Red%2C_White_%26_Royal_Blue_Book_Cover.jpg",
-      "genre": ["Romance"]
+      "genre": "Romance"
     },
     {
       "id": 2,
       "title": "A Marvelous Light",
       "author": "Freya Marske",
       "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1634067514i/53217284.jpg",
-      "genre": ["Romance", "Fantasy"]
+      "genre": "Fantasy"
     },
     {
       "id": 3,
       "title": "Shadow and Bone",
       "author": "Leigh Bardugo",
       "image": "https://m.media-amazon.com/images/I/816JhuO1cyS._AC_UF1000,1000_QL80_.jpg",
-      "genre": ["Fantasy"]
+      "genre": "Fantasy"
     }
   ],
   "tv-movies": [
@@ -67,7 +67,7 @@
       "id": 3,
       "title": "Charmed",
       "year": "1998-2006",
-      "image": "https://upload.wikimedia.org/wikipedia/en/0/0b/Batman_2021_poster.jpg",
+      "image": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p184399_b_v13_av.jpg",
       "type": "tv"
     }
 }
