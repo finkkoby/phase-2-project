@@ -1,6 +1,12 @@
 .App {
   text-align: left;
-  margin-left: 30px;
+  margin: 0px 30px;
+}
+
+div.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 nav a {
@@ -13,4 +19,44 @@ nav a {
 nav a.active {
   font-weight: bold;
   background-color: lightgrey;
+}
+
+div.item-list {
+  margin: 50px 10px;
+}
+
+div.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 20px 0px;
+}
+
+div.card-image img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+div.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 10px 40px 10px;
+}
+
+h2 {
+  margin: 10px 0px;
+}
+
+h5 {
+  margin: 10px 0px;
+}
+
+p, small {
+  margin: inherit;
+}
+
+small {
+  font-size: 13px;
 }
