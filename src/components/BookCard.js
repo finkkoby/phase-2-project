@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-function BookCard({ book }) {
+function BookCard({ book, onDelete }) {
     return (
         <div className='card'>
             <div className='item-card'>
@@ -17,7 +17,7 @@ function BookCard({ book }) {
                 </div>
             </div>
             <div className='delete-button'>
-                <button>x</button>
+                <button onClick={() => onDelete(book)}>x</button>
             </div>
         </div>
     )

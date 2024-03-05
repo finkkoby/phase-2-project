@@ -9,8 +9,16 @@ function Books() {
        .then(books => setBooks(books));
     }, []);
 
+    function handleDelete(item) {
+        fetch(`http://localhost:3000/books/${item.id}`, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(() => setBooks(books.filter(book => book.id !== item.id)))
+    }
+
     const booksList = books.map(book => {
-        return <BookCard book={book} key={book.id}/>
+        return <BookCard book={book} key={book.id} onDelete={handleDelete}/>
     })
 
     return (

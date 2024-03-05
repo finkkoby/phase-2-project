@@ -10,8 +10,16 @@ function TVMovies() {
             .then(movies => setMovies(movies));
     }, [])
 
+    function handleDelete(item) {
+        fetch(`http://localhost:3000/tv-movies/${item.id}`, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(() => setMovies(movies.filter(movie => movie.id !== item.id)))
+    }
+
     const moviesList = movies.map(movie => {
-        return <TVMovieCard movie={movie} key={movie.id} />
+        return <TVMovieCard movie={movie} key={movie.id} onDelete={handleDelete}/>
     })
 
     return (

@@ -10,8 +10,16 @@ function Songs() {
          .then(songs => setSongs(songs));
     }, []);
 
+    function handleDelete(item) {
+        fetch(`http://localhost:3000/songs/${item.id}`, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(() => setSongs(songs.filter(song => song.id !== item.id)))
+    }
+
     const songsList = songs.map(song => {
-        return <SongCard song={song} key={song.id} />
+        return <SongCard song={song} key={song.id} onDelete={handleDelete}/>
     })
 
     return (
