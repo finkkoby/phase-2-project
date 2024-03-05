@@ -1,6 +1,7 @@
 .App {
   text-align: left;
   margin: 0px 30px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 div.navbar {
@@ -26,6 +27,12 @@ div.item-list {
 }
 
 div.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.item-card {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
