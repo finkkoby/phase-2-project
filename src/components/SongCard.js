@@ -1,7 +1,7 @@
 function SongCard({ song }) {
     return (
         <div className="card">
-            <div className='card-image'>
+            <div className='card-image album'>
                 <img src={song.image} alt={song.album} />
             </div>
             <div className='card-info'>

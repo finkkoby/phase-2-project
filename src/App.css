@@ -33,9 +33,14 @@ div.card {
 }
 
 div.card-image {
+  width: 165px;
+  height: 250px;
+  margin: 10px;
+}
+
+div.card-image.album{
   width: 200px;
   height: 200px;
-  margin: 10px;
 }
 
 div.card-image img {
