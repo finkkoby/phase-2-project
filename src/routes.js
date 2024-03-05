@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Songs from './pages/Songs';
 import Books from './pages/Books';
 import TVMovies from './pages/TVMovies';
+import AddNew from './pages/AddNew';
 
 const routes = [
     {
@@ -14,19 +15,28 @@ const routes = [
         children: [
             {
                 path: '/',
-                element: <Home />
+                element: <Home />,
+                errorElement: <ErrorPage />
             },
             {
                 path: '/songs',
-                element: <Songs />
+                element: <Songs />,
+                errorElement: <ErrorPage />
             },
             {
                 path: '/books',
-                element: <Books />
+                element: <Books />,
+                errorElement: <ErrorPage />
             },
             {
                 path: '/tv-movies',
-                element: <TVMovies />
+                element: <TVMovies />,
+                errorElement: <ErrorPage />
+            },
+            {
+                path: '/add-new',
+                element: <AddNew />,
+                errorElement: <ErrorPage />
             }
         ]
     }

@@ -4,7 +4,7 @@
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-div.navbar {
+nav.navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -77,4 +77,11 @@ p, small {
 
 small {
   font-size: 13px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 0px;
 }
