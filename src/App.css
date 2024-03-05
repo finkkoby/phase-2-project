@@ -5,10 +5,12 @@
 
 nav a {
   margin: 6px;
+  padding: 6px;
   text-decoration: none;
   color: #000;
 }
 
 nav a.active {
   font-weight: bold;
+  background-color: lightgrey;
 }

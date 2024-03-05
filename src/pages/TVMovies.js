@@ -1,7 +1,7 @@
 function TVMovies() {
     return (
         <div>
-            <h1>TVMovies</h1>
+            <h1>TV & Movies</h1>
         </div>
     )
 }
