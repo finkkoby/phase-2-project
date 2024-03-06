@@ -19,7 +19,7 @@ function Songs() {
     }
 
     const songsList = songs.map(song => {
-        return <SongCard song={song} key={song.id} onDelete={handleDelete}/>
+        return <SongCard song={song} key={song.id} onDelete={handleDelete} button={true}/>
     })
 
     return (

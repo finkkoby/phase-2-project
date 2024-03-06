@@ -1,4 +1,4 @@
-function TVMovieCard({ movie, onDelete }) {
+function TVMovieCard({ movie, onDelete, button }) {
     return (
         <div className='card'>
             <div className='item-card'>
@@ -15,9 +15,7 @@ function TVMovieCard({ movie, onDelete }) {
                     </div>
                 </div>
             </div>
-            <div className='delete-button'>
-                <button onClick={() => onDelete(movie)}>x</button>
-            </div>
+            {button ? <div className='delete-button'><button onClick={() => onDelete(movie)}>x</button></div> : null }
         </div>
     )
 }

@@ -18,7 +18,7 @@ function Books() {
     }
 
     const booksList = books.map(book => {
-        return <BookCard book={book} key={book.id} onDelete={handleDelete}/>
+        return <BookCard book={book} key={book.id} onDelete={handleDelete} button={true}/>
     })
 
     return (

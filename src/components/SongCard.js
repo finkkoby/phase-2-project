@@ -1,4 +1,4 @@
-function SongCard({ song, onDelete }) {
+function SongCard({ song, onDelete, button }) {
     return (
         <div className='card'>
             <div className='item-card'>
@@ -16,9 +16,7 @@ function SongCard({ song, onDelete }) {
                     </div>
                 </div>
             </div>
-            <div className='delete-button'>
-                <button onClick={() => onDelete(song)}>x</button>
-            </div>
+            {button ? <div className='delete-button'><button onClick={() => onDelete(song)}>x</button></div> : null }
         </div>
     );
 }

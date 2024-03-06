@@ -1,5 +1,6 @@
 import { useState } from'react';
 import { Navigate } from 'react-router-dom';
+import TVMovieCard from './TVMovieCard';
 
 function NewTVMovie() {
     const [title, setTitle] = useState('');
@@ -8,6 +9,13 @@ function NewTVMovie() {
     const [movie, setMovie] = useState(false);
     const [image, setImage] = useState('');
     const [submited, setSubmitted] = useState(false);
+
+    const tvMovie = {
+        title: title,
+        year: year,
+        type: tv ? 'tv' : 'movie',
+        image: image
+    }    
 
     function handleTitleChange(e) {
         setTitle(e.target.value);
@@ -61,69 +69,72 @@ function NewTVMovie() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label htmlFor='tv-movie-title'>
-                Title: 
-                <input
-                type="text" 
-                name="title" 
-                placeholder="The Devil Wears Prada" 
-                value={title}
-                onChange={handleTitleChange} 
-                id='tv-movie-title' />
-            </label>
-
-            <label htmlFor='tv-movie-year'>
-                Year:             
-                <input 
-                type="text" 
-                name="year" 
-                placeholder="2006" 
-                value={year} 
-                onChange={handleYearChange} 
-                id='tv-movie-year' 
-                />
-            </label>
-
-            <div>
-                <label htmlFor='tv-type'>
+        <>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor='tv-movie-title'>
+                    Title: 
                     <input
-                    type="radio" 
-                    name="tv"  
-                    checked={tv}
-                    onChange={handleTVChange}
-                    id='tv-type' 
-                    />
-                    TV
+                    type="text" 
+                    name="title" 
+                    placeholder="The Devil Wears Prada" 
+                    value={title}
+                    onChange={handleTitleChange} 
+                    id='tv-movie-title' />
                 </label>
 
-                <label htmlFor='movie-type'>
-                    <input
-                    type="radio" 
-                    name="movie"  
-                    checked={movie}
-                    onChange={handleMovieChange}
-                    id='movie-type' 
+                <label htmlFor='tv-movie-year'>
+                    Year:             
+                    <input 
+                    type="text" 
+                    name="year" 
+                    placeholder="2006" 
+                    value={year} 
+                    onChange={handleYearChange} 
+                    id='tv-movie-year' 
                     />
-                    Movie
                 </label>
-            </div>
 
-            <label htmlFor='tv-movie-image'>
-                Image: 
-                <input 
-                type="text" 
-                name="image" 
-                placeholder="www.imagelink.com" 
-                value={image}
-                onChange={handleImageChange}
-                id='tv-movie-image'
-                />
-            </label>
+                <div>
+                    <label htmlFor='tv-type'>
+                        <input
+                        type="radio" 
+                        name="tv"  
+                        checked={tv}
+                        onChange={handleTVChange}
+                        id='tv-type' 
+                        />
+                        TV
+                    </label>
 
-            <button type="submit">Add new</button>
-            {submited? <Navigate to="/tv-movies" /> : null}
-        </form>
+                    <label htmlFor='movie-type'>
+                        <input
+                        type="radio" 
+                        name="movie"  
+                        checked={movie}
+                        onChange={handleMovieChange}
+                        id='movie-type' 
+                        />
+                        Movie
+                    </label>
+                </div>
+
+                <label htmlFor='tv-movie-image'>
+                    Image: 
+                    <input 
+                    type="text" 
+                    name="image" 
+                    placeholder="www.imagelink.com" 
+                    value={image}
+                    onChange={handleImageChange}
+                    id='tv-movie-image'
+                    />
+                </label>
+
+                <button type="submit">Add new</button>
+                {submited? <Navigate to="/tv-movies" /> : null}
+            </form>
+            <TVMovieCard movie={tvMovie} button={false}/>
+        </>
     )
 }
 

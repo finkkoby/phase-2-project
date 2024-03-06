@@ -19,7 +19,7 @@ function TVMovies() {
     }
 
     const moviesList = movies.map(movie => {
-        return <TVMovieCard movie={movie} key={movie.id} onDelete={handleDelete}/>
+        return <TVMovieCard movie={movie} key={movie.id} onDelete={handleDelete} button={true}/>
     })
 
     return (

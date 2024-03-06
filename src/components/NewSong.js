@@ -1,5 +1,6 @@
 import { useState } from'react';
 import { Navigate } from 'react-router-dom';
+import SongCard from './SongCard';
 
 function NewSong() {
     const [title, setTitle] = useState('');
@@ -8,6 +9,14 @@ function NewSong() {
     const [length, setLength] = useState('');
     const [image, setImage] = useState('');
     const [submited, setSubmitted] = useState(false);
+
+    const song = {
+        title: title,
+        artist: artist,
+        album: album,
+        length: length,
+        image: image
+    }
 
     function handleTitleChange(e) {
         setTitle(e.target.value);
@@ -52,69 +61,72 @@ function NewSong() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label htmlFor='song-title'>
-                Title: 
-                <input 
-                type="text" 
-                name="title" 
-                placeholder="I Feel The Earth Move" 
-                value={title}
-                onChange={handleTitleChange}
-                id='song-title' 
-                />
-            </label>
+        <>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor='song-title'>
+                    Title: 
+                    <input 
+                    type="text" 
+                    name="title" 
+                    placeholder="I Feel The Earth Move" 
+                    value={title}
+                    onChange={handleTitleChange}
+                    id='song-title' 
+                    />
+                </label>
 
-            <label htmlFor='song-artist'>
-                Artist:             
-                <input 
-                type="text" 
-                name="artist" 
-                placeholder="Carole King" 
-                value={artist}
-                onChange={handleArtistChange}
-                id='song-artist' 
-                />
-            </label>
+                <label htmlFor='song-artist'>
+                    Artist:             
+                    <input 
+                    type="text" 
+                    name="artist" 
+                    placeholder="Carole King" 
+                    value={artist}
+                    onChange={handleArtistChange}
+                    id='song-artist' 
+                    />
+                </label>
 
-            <label htmlFor='song-album'>
-                Album: 
-                <input 
-                type="text" 
-                name="album" 
-                placeholder="Tapestry" 
-                value={album}
-                onChange={handleAlbumChange}
-                id='song-album' 
-                />
-            </label>
+                <label htmlFor='song-album'>
+                    Album: 
+                    <input 
+                    type="text" 
+                    name="album" 
+                    placeholder="Tapestry" 
+                    value={album}
+                    onChange={handleAlbumChange}
+                    id='song-album' 
+                    />
+                </label>
 
-            <label htmlFor='song-length'>
-                Duration: 
-                <input 
-                type="text" 
-                name="length" 
-                placeholder="2:58" 
-                value={length}
-                onChange={handleLengthChange}
-                id='song-length'
-                />
-            </label>
+                <label htmlFor='song-length'>
+                    Duration: 
+                    <input 
+                    type="text" 
+                    name="length" 
+                    placeholder="2:58" 
+                    value={length}
+                    onChange={handleLengthChange}
+                    id='song-length'
+                    />
+                </label>
 
-            <label htmlFor='song-image'>
-                Image:             
-                <input 
-                type="text" 
-                name="image" 
-                placeholder="www.imagelink.com" 
-                value={image}
-                onChange={handleImageChange}
-                id='song-image'
-                />
-            </label>
-            <button type="submit">Add new</button>
-            {submited? <Navigate to="/songs" /> : null}
-        </form>
+                <label htmlFor='song-image'>
+                    Image:             
+                    <input 
+                    type="text" 
+                    name="image" 
+                    placeholder="www.imagelink.com" 
+                    value={image}
+                    onChange={handleImageChange}
+                    id='song-image'
+                    />
+                </label>
+                <button type="submit">Add new</button>
+                {submited? <Navigate to="/songs" /> : null}
+            </form>
+            <SongCard song={song} button={false}/>
+        </>
     )
 }
 
