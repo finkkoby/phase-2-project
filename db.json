@@ -54,6 +54,13 @@
       "author": "Leigh Bardugo",
       "image": "https://m.media-amazon.com/images/I/816JhuO1cyS._AC_UF1000,1000_QL80_.jpg",
       "genre": "Fantasy"
+    },
+    {
+      "id": "8fd1",
+      "title": "A Little Life",
+      "author": "Hanya Yanagihara",
+      "genre": "Fiction",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1446469353i/22822858.jpg"
     }
   ],
   "tv-movies": [

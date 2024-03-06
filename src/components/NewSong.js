@@ -58,7 +58,7 @@ function NewSong() {
                 <input 
                 type="text" 
                 name="title" 
-                placeholder="Title" 
+                placeholder="I Feel The Earth Move" 
                 value={title}
                 onChange={handleTitleChange}
                 id='song-title' 
@@ -70,7 +70,7 @@ function NewSong() {
                 <input 
                 type="text" 
                 name="artist" 
-                placeholder="Artist" 
+                placeholder="Carole King" 
                 value={artist}
                 onChange={handleArtistChange}
                 id='song-artist' 
@@ -82,7 +82,7 @@ function NewSong() {
                 <input 
                 type="text" 
                 name="album" 
-                placeholder="Album" 
+                placeholder="Tapestry" 
                 value={album}
                 onChange={handleAlbumChange}
                 id='song-album' 
@@ -94,7 +94,7 @@ function NewSong() {
                 <input 
                 type="text" 
                 name="length" 
-                placeholder="Duration" 
+                placeholder="2:58" 
                 value={length}
                 onChange={handleLengthChange}
                 id='song-length'
@@ -106,7 +106,7 @@ function NewSong() {
                 <input 
                 type="text" 
                 name="image" 
-                placeholder="Image" 
+                placeholder="www.imagelink.com" 
                 value={image}
                 onChange={handleImageChange}
                 id='song-image'
