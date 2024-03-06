@@ -82,6 +82,10 @@ small {
 form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-start;
   margin: 10px 0px;
+}
+
+form label {
+  display: inline;
 }
