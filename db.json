@@ -25,7 +25,7 @@
       "image": "https://images.genius.com/324acb2792e1aec593b539054faab2ea.1000x1000x1.png"
     },
     {
-      "id": "ac94",
+      "id": "358e",
       "title": "That's The Way It Is",
       "artist": "Betsy Wolfe",
       "album": "& Juliet",
@@ -91,13 +91,6 @@
       "year": "2022-present",
       "type": "tv",
       "image": "https://m.media-amazon.com/images/M/MV5BOWVkOTM4MDAtMTkwMS00ZTE0LTk0ZGMtNDQzOTYyOGNiNjg0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
-    },
-    {
-      "id": "be7a",
-      "title": "The Devil Wears Prada",
-      "year": "2006",
-      "type": "movie",
-      "image": "https://m.media-amazon.com/images/M/MV5BZjQ3ZTIzOTItMGNjNC00MWRmLWJlMGEtMjJmMDM5ZDIzZGM3XkEyXkFqcGdeQXVyMTkzODUwNzk@._V1_.jpg"
     }
   ]
 }

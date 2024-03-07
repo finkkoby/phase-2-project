@@ -1,10 +1,16 @@
-import { useState } from'react';
+import { useState, useEffect } from'react';
 import NewSong from '../components/NewSong';
 import NewBook from '../components/NewBook';
 import NewTVMovie from '../components/NewTVMovie';
+import { useOutletContext } from'react-router-dom';
 
 function AddNew() {
     const [type, setType] = useState('song');
+    const clickFunction = useOutletContext();
+
+    useEffect(() => {
+        clickFunction(true);
+    }, [])
 
     function handleTypeChange(e) {
         setType(e.target.value);

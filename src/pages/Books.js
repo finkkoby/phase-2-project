@@ -1,7 +1,14 @@
 import { useState, useEffect } from 'react';
 import BookCard from '../components/BookCard';
+import { useOutletContext } from'react-router-dom';
+
 function Books() {
     const [books, setBooks] = useState([]);
+    const clickFunction = useOutletContext();
+
+    useEffect(() => {
+        clickFunction(true);
+    }, [])
 
     useEffect(() => {
         fetch(`http://localhost:3000/books`)

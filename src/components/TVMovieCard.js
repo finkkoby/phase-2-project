@@ -3,7 +3,7 @@ function TVMovieCard({ movie, onDelete, button }) {
         <div className='card'>
             <div className='item-card'>
                 <div className='card-image'>
-                    <img src={movie.image} alt={movie.title} />
+                    <img src={movie.image === '' ? 'https://t3.ftcdn.net/jpg/00/63/63/46/360_F_63634678_7ea6wuF1yvCq7NKkCAGnYUmcrsQEpEdm.jpg' : movie.image} alt={movie.title} />
                 </div>
                 <div className='card-info'>
                     <div className='card-info-title'>

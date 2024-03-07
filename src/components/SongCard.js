@@ -3,7 +3,7 @@ function SongCard({ song, onDelete, button }) {
         <div className='card'>
             <div className='item-card'>
                 <div className='card-image album'>
-                    <img src={song.image} alt={song.album} />
+                    <img src={song.image === '' ? 'https://media.istockphoto.com/id/451338029/photo/vinyl-record.jpg?s=612x612&w=0&k=20&c=h_DUl-RXAlBvLz2dH_EgPEr7kpcwFLzwqE8Ir3xXUEg=' : song.image} alt={song.album} />
                 </div>
                 <div className='card-info'>
                     <div className='card-info-title'>

@@ -4,7 +4,7 @@ function BookCard({ book, onDelete, button }) {
         <div className='card'>
             <div className='item-card'>
                 <div className='card-image'>
-                    <img src={book.image} alt={book.title} />
+                    <img src={book.image === '' ? 'https://m.media-amazon.com/images/I/31Lw+SqElDL._AC_UF894,1000_QL80_.jpg' : book.image} alt={book.title} />
                 </div>
                 <div className='card-info'>
                     <div className='card-info-title'>

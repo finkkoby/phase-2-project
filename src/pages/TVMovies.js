@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from'react';
 import TVMovieCard from '../components/TVMovieCard';
+import { useOutletContext } from'react-router-dom';
 
 function TVMovies() {
     const [movies, setMovies] = useState([]);
+    const clickFunction = useOutletContext();
+
+    useEffect(() => {
+        clickFunction(true);
+    }, [])
 
     useEffect(() => {
         fetch(`http://localhost:3000/tv-movies`)

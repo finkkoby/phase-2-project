@@ -1,7 +1,17 @@
+import { Link, useOutletContext } from'react-router-dom';
+import { useEffect } from'react';
+
 function Home() {
+    const clickFunction = useOutletContext();
+    useEffect(() => {
+        clickFunction(false);
+    }, [])
     return (
-        <div>
-            <h3>Welcome to my favorites!</h3>
+        <div className='home-body'>
+            <h4>Welcome to my favorites!</h4>
+            <Link to="/songs" className='home-link'>Songs</Link>
+            <Link to="/books" className='home-link'>Books</Link>
+            <Link to="/tv-movies" className='home-link'>TV & Movies</Link>
         </div>
     )
 }

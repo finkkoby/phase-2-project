@@ -10,7 +10,7 @@ nav.navbar {
   justify-content: space-between;
 }
 
-nav a {
+nav a { 
   margin: 6px;
   padding: 6px;
   text-decoration: none;
@@ -20,6 +20,10 @@ nav a {
 nav a.active {
   font-weight: bold;
   background-color: lightgrey;
+}
+
+nav a:hover {
+  box-shadow:gray 1px 1px;
 }
 
 div.item-list {
@@ -96,4 +100,58 @@ form input {
 
 form button {
   margin: 10px 0px;
+}
+
+a.home-link {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  font-size: larger;
+  font-weight: bold;
+  margin: 40px 30px;
+  padding: 10px;
+  width: 300px;
+  background-color: lightgray;
+  letter-spacing: 10px;
+  text-shadow: white 1px 1px;
+}
+
+a.home-link:hover {
+  box-shadow:#000 2px 2px;
+}
+
+div.delete-button button {
+  padding: 5px 10px;
+  background-color: lightgray;
+  border: none;
+  opacity: 60%;
+}
+
+div.delete-button button:hover {
+  box-shadow:black 1px 1px;
+}
+
+h1 {
+  letter-spacing: 15px;
+  text-shadow: gray 2px 2px;
+  margin: 30px 10px 40px 10px;
+}
+
+div.home-body {
+  margin: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.home-body h4 {
+  letter-spacing: 5px;
+  font-size: 30px;
+}
+
+a {
+  letter-spacing: 3px;
 }

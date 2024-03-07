@@ -1,8 +1,14 @@
 import { useState, useEffect } from 'react';
 import SongCard from '../components/SongCard';
+import { useOutletContext } from 'react-router-dom';
 
 function Songs() {
     const [songs, setSongs] = useState([]);
+    const clickFunction = useOutletContext();
+
+    useEffect(() => {
+        clickFunction(true);
+    }, [])
 
     useEffect(() => {
         fetch(`http://localhost:3000/songs`)
