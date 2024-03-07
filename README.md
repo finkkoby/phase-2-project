@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+Welcome to Koby's Current Favorites!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I wanted to create something that allowed me to keep track of all of my favorite things.
 
-## Available Scripts
+I thought that this would be the perfect way to apply what I have been learning.
 
-In the project directory, you can run:
+ ## npm start
 
-### `npm start`
+ Once the page loads, you will see the home page with a couple of links.
+ The three in the center lead to different pages that render my favorite things in that category.
+ The NavBar component also shows two elements one that allows you to return to this page from anywhere, and one that allows you to add a new item! More on that later.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ Once you click on one of the three main categories, the NavBar updates to allow you to switch between pages/categories.
+ You still have the option to return home or add a new item.
+ Each item in the list of favorites also has an 'x' in the top right which allows you to remove that item.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ The 'Add New' page renders a form to allow you to add a new item. The input fields update based on what type of item you are trying to add, as well as the preview that renders below. Due to the different information need for each type of item, there is a separate component for each form type, as well as for each item card. On this page, there is a default picture provided for each card. The add new button sends a POST request to your server with the new item info, and the page redirects to the respective category page so you can check out your new item!
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Images used:
+https://i1.sndcdn.com/artworks-F5H85xHY4qId6Lt2-Y3Ylig-t500x500.jpg
+https://upload.wikimedia.org/wikipedia/en/e/e0/Beyonc%C3%A9_-_Texas_Hold_%27Em.png
+https://images.genius.com/324acb2792e1aec593b539054faab2ea.1000x1000x1.png
+https://m.media-amazon.com/images/I/91ZnMXRcocL._UF1000,1000_QL80_.jpg
+https://upload.wikimedia.org/wikipedia/en/8/80/Red%2C_White_%26_Royal_Blue_Book_Cover.jpg
+https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1634067514i/53217284.jpg
+https://m.media-amazon.com/images/I/816JhuO1cyS._AC_UF1000,1000_QL80_.jpg
+https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1446469353i/22822858.jpg
+https://upload.wikimedia.org/wikipedia/en/a/a6/AbbottElementaryS1DVD.jpg
+https://upload.wikimedia.org/wikipedia/en/0/0b/Barbie_2023_poster.jpg
+https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p184399_b_v13_av.jpg
+https://m.media-amazon.com/images/M/MV5BOWVkOTM4MDAtMTkwMS00ZTE0LTk0ZGMtNDQzOTYyOGNiNjg0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg
+https://m.media-amazon.com/images/I/31Lw+SqElDL._AC_UF894,1000_QL80_.jpg
+https://t3.ftcdn.net/jpg/00/63/63/46/360_F_63634678_7ea6wuF1yvCq7NKkCAGnYUmcrsQEpEdm.jpg
+https://media.istockphoto.com/id/451338029/photo/vinyl-record.jpg?s=612x612&w=0&k=20&c=h_DUl-RXAlBvLz2dH_EgPEr7kpcwFLzwqE8Ir3xXUEg=
