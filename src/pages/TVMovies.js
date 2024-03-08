@@ -3,17 +3,10 @@ import TVMovieCard from '../components/TVMovieCard';
 import { useOutletContext } from'react-router-dom';
 
 function TVMovies() {
-    const [movies, setMovies] = useState([]);
-    const clickFunction = useOutletContext();
+    const [toggleNavBar, , , , , movies, setMovies] = useOutletContext()
 
     useEffect(() => {
-        clickFunction(true);
-    }, [])
-
-    useEffect(() => {
-        fetch(`http://localhost:3000/tv-movies`)
-            .then(res => res.json())
-            .then(movies => setMovies(movies));
+        toggleNavBar(true);
     }, [])
 
     function handleDelete(item) {

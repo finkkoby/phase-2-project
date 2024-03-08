@@ -2,9 +2,9 @@ import { Link, useOutletContext } from'react-router-dom';
 import { useEffect } from'react';
 
 function Home() {
-    const clickFunction = useOutletContext();
+    const [toggleNavBar] = useOutletContext()
     useEffect(() => {
-        clickFunction(false);
+        toggleNavBar(false);
     }, [])
     return (
         <div className='home-body'>

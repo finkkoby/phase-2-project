@@ -1,6 +1,7 @@
 import { useState } from'react';
 import { Navigate } from 'react-router-dom';
 import SongCard from './SongCard';
+import { useOutletContext } from 'react-router-dom';
 
 function NewSong() {
     const [title, setTitle] = useState('');
@@ -9,6 +10,8 @@ function NewSong() {
     const [length, setLength] = useState('');
     const [image, setImage] = useState('');
     const [submited, setSubmitted] = useState(false);
+
+    const [, , , songs, setSongs] = useOutletContext()
 
     const song = {
         title: title,
@@ -57,7 +60,10 @@ function NewSong() {
             body: JSON.stringify(newSong)
         })
       .then(res => res.json())
-      .then(item => setSubmitted(true));
+      .then(item => {
+        setSongs([...songs, item])
+        setSubmitted(true)
+    });
     }
 
     return (

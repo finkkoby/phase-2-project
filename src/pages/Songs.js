@@ -3,18 +3,11 @@ import SongCard from '../components/SongCard';
 import { useOutletContext } from 'react-router-dom';
 
 function Songs() {
-    const [songs, setSongs] = useState([]);
-    const clickFunction = useOutletContext();
+    const [toggleNavBar, , , songs, setSongs] = useOutletContext()
 
     useEffect(() => {
-        clickFunction(true);
+        toggleNavBar(true);
     }, [])
-
-    useEffect(() => {
-        fetch(`http://localhost:3000/songs`)
-         .then(res => res.json())
-         .then(songs => setSongs(songs));
-    }, []);
 
     function handleDelete(item) {
         fetch(`http://localhost:3000/songs/${item.id}`, {

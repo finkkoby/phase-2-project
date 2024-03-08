@@ -6,10 +6,10 @@ import { useOutletContext } from'react-router-dom';
 
 function AddNew() {
     const [type, setType] = useState('song');
-    const clickFunction = useOutletContext();
+    const [toggleNavBar] = useOutletContext()
 
     useEffect(() => {
-        clickFunction(true);
+        toggleNavBar(true);
     }, [])
 
     function handleTypeChange(e) {

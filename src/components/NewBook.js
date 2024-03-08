@@ -1,6 +1,7 @@
 import { useState } from'react';
 import { Navigate } from'react-router-dom';
 import BookCard from './BookCard';
+import { useOutletContext } from 'react-router-dom';
 
 function NewBook() {
     const [title, setTitle] = useState('');
@@ -8,6 +9,8 @@ function NewBook() {
     const [genre, setGenre] = useState('');
     const [image, setImage] = useState('');
     const [submitted, setSubmitted] = useState(false);
+
+    const [, books, setBooks] = useOutletContext()
 
     const book = {
         title: title,
@@ -50,7 +53,10 @@ function NewBook() {
             body: JSON.stringify(newBook)
         })
         .then(res => res.json())
-        .then(item => setSubmitted(true));
+        .then(item => {
+            setBooks([...books, item])
+            setSubmitted(true)
+        });
     }
     return (
         <>

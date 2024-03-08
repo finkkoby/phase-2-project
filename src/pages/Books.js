@@ -3,18 +3,11 @@ import BookCard from '../components/BookCard';
 import { useOutletContext } from'react-router-dom';
 
 function Books() {
-    const [books, setBooks] = useState([]);
-    const clickFunction = useOutletContext();
+    const [toggleNavBar, books, setBooks ] = useOutletContext()
 
     useEffect(() => {
-        clickFunction(true);
+        toggleNavBar(true);
     }, [])
-
-    useEffect(() => {
-        fetch(`http://localhost:3000/books`)
-       .then(res => res.json())
-       .then(books => setBooks(books));
-    }, []);
 
     function handleDelete(item) {
         fetch(`http://localhost:3000/books/${item.id}`, {

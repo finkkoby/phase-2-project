@@ -1,6 +1,7 @@
 import { useState } from'react';
 import { Navigate } from 'react-router-dom';
 import TVMovieCard from './TVMovieCard';
+import { useOutletContext } from 'react-router-dom';
 
 function NewTVMovie() {
     const [title, setTitle] = useState('');
@@ -9,6 +10,8 @@ function NewTVMovie() {
     const [movie, setMovie] = useState(false);
     const [image, setImage] = useState('');
     const [submited, setSubmitted] = useState(false);
+
+    const [, , , , , movies, setMovies] = useOutletContext()
 
     const tvMovie = {
         title: title,
@@ -65,7 +68,10 @@ function NewTVMovie() {
             body: JSON.stringify(newMovie)
         })
         .then(res => res.json())
-        .then(item => setSubmitted(true));
+        .then(item => {
+            setMovies([...movies, item])
+            setSubmitted(true)
+        });
     }
 
     return (
