@@ -50,7 +50,7 @@ function NewBook() {
             body: JSON.stringify(newBook)
         })
         .then(res => res.json())
-        setSubmitted(true);
+        .then(item => setSubmitted(true));
     }
     return (
         <>

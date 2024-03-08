@@ -65,7 +65,7 @@ function NewTVMovie() {
             body: JSON.stringify(newMovie)
         })
         .then(res => res.json())
-        setSubmitted(true);
+        .then(item => setSubmitted(true));
     }
 
     return (

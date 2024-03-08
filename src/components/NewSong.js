@@ -57,7 +57,7 @@ function NewSong() {
             body: JSON.stringify(newSong)
         })
       .then(res => res.json())
-      setSubmitted(true);
+      .then(item => setSubmitted(true));
     }
 
     return (
